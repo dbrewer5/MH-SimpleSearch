@@ -1,0 +1,61 @@
+#Name|Description|Set Bonus (0=false,1=true)|Levels
+Attack Boost|Increases attack power. Also improves affinity at higher levels.|0|7
+Critical Eye|Increases affinity.|0|7
+Affinity Sliding|Sliding increases your affinity for a short time.|0|1
+Water Attack|Increases water element attack power. (Elemental attack power has a maximum limit.)|0|3
+Thunder Attack|Increases thunder element attack power. (Elemental attack power has a maximum limit.)|0|3
+Fire Attack|Increases fire element attack power. (Elemental attack power has a maximum limit.)|0|3
+Ice Attack|Increases ice element attack power. (Elemental attack power has a maximum limit.)|0|3
+Poison Attack|Increases the rate of poison buildup.|0|3
+Paralysis Attack|Increases the rate of paralysis buildup.|0|3
+Sleep Attack|Increases the rate of sleep buildup.|0|3
+Artillery|Stengthens explosive attacks like gunlance shells, Wyvern's Fire, charge blade phial attacks, and sticky ammo.|0|3
+Special Ammo Boost|Increases the power of bowgun special ammo and Dragon Piercer.|0|2
+Defense Boost|Increases defense. Level up to improve resistances as well.|0|7
+Water Resistance|Increases water resistance. Also improves defense at higher levels.|0|3
+Thunder Resistance|Increases thunder resistance. Also improves defense at higher levels.|0|3
+Fire Resistance|Increases fire resistance. Also improves defense at higher levels.|0|3
+Ice Resistance|Increases ice resistance. Also improves defense at higher levels.|0|3
+Poison Resistance|Grants protection against the effects of poison.|0|3
+Paralysis Resistance|Reduces the duration of paralysis.|0|3
+Stun Resistance|Reduces stun duration.|0|3
+Windproof|Grants protection against wind pressure.|0|5
+Muck Resistance|Reduces impairments to mobility while stuck in monster muck.|0|1
+Evade Extender|Increases evade distance.|0|3
+Evade Window|Extends the invulnerability period when evading.|0|5
+Stealth|Makes it easier for monsters to lose sight of you.|0|3
+Constitution|Reduces stamina depletion when performing stamina-draining moves such as evading, etc.|0|5
+Marathon Runner|Slows down stamina depletion for actions which continuously drain stamina (such as dashing).|0|3
+Stamina Thief|Increases certain attacks' ability to exhaust monsters.|0|3
+Hunger Resistance|Reduces maximum stamina depletion over time.|0|3
+Master Gatherer|Allows you to gather more quickly, and also prevents attacks from knocking you back while gathering.|0|1
+Scoutfly Range Up|Expands your scoutflies' detection range.|0|1
+Slinger Capacity|Increases the loading capacity for slinger ammo obtained in the field.|0|3
+Scenthound|Increases your scoutflies' gauge fill rate when you find tracks and other traces left by monsters.|0|1
+BBQ Master|Improces your skill at cooking meat.|0|1
+Health Boost|Increase health.|0|3
+Slugger|Makes it easier to dizzy monsters.|0|3
+Horn Maestro|Increases the effect duration of hunting horn melodies.|0|1
+Entomologist|Decreases the chances of destroying the bodies of small insect monsters, allows them to be carved.|0|3
+Quick Sheath|Speeds up weapon sheathing.|0|3
+Honey Hunter|Increases the quantity of honey you receive when gathering in the field.|0|1
+Aquatic Expert|Improves mobility in water.|0|3
+Speed Eating|Increases meat-eating and item-consumption speed.|0|3
+Intimidator|Reduces the chances small monster will attack after spotting you.|0|3
+Palico Rally|Powers up Palicoes.|0|5
+Fortify|Increases your attack and defense every time you fall in battle, up to two times.|0|1
+Speed Crawler|Increases movement speed while crouching.|0|1
+Stamina Surge|Speeds up stamina recovery.|0|3
+Pro Transporter|Increases your speed while transporting items and decreases the likelihood of dropping them.|0|1
+Item Prolonger|Extends the duration of some item effects.|0|3
+Speed Sharpening|Speeds up weapon sharpening when using a whetstone.|0|3
+Sporepuff Expert|Recover health when using sporepuffs.|0|3
+Botanist|Increases the quanitity of herbs and other consumable items you gather.|0|4
+Guard|Reduces knockbacks and stamina depletion when guarding.|0|5
+Focus|Increases the fill rate for weapons with gauges and the charge rate for weapons with charge attacks.|0|3
+Jump Master|Prevents attacks from knocking you back during a jump.|0|1
+Master Mounter|Makes it easier to mount monsters.|0|1
+Cliffhanger|Decreases stamina depletion when evading while clinging to walls or ivy.|0|1
+Recovery Up|Increases the amount recovered when restoring health.|0|3
+Recovery Speed|Speeds recovery from temporary damage (the red portion of the health gauge).|0|3
+Adrenaline|Temporarily reduces stamina depletion when health is at 40% or lower.|1|3
