@@ -82,7 +82,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="arms.txt" />
+    <Content Include="body.txt" />
+    <Content Include="helm.txt" />
+    <Content Include="legs.txt" />
     <EmbeddedResource Include="skills.txt" />
+    <Content Include="waist.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
