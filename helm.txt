@@ -1,7 +1,0 @@
-#Name|Skill|Points|...
-Hunter's Headgear|Stun Resistance|1
-Forest Helm|Speed Eating|1
-Jagras Headgear|Recovery Up|1
-Anja Headgear|Attack Boost|1
-Ingot Headgear|Defense Boost|1
-Feathered Headgear|Critical Eye|1

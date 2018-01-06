@@ -1,0 +1,7 @@
+#Name|Slots|Skill|Points|...
+Hunter's Leggings|0|Cliffhanger|1
+Forest Leggings|0|Stealth|1
+Jagras Leggings|0|Speed Eating|1
+Anja Leggings|0|Fire Resistance|1
+Ingot Leggings|0|Critical Eye|1
+Feathered Leggings|0|Recovery Speed|1

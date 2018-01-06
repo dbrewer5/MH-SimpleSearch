@@ -1,7 +1,0 @@
-#Name|Skill|Points|...
-Hunter's Gloves|Stun Resistance|1
-Forest Gloves|Stealth|1
-Jagras Gloves|Speed Eating|1
-Anja Gloves|Fire Attack|1
-Ingot Gloves|Defense Boost|1
-Feathered Gloves|Recovery Speed|1

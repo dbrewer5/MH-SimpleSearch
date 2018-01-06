@@ -1,65 +1,89 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MHWSS
 {
     public partial class Form1 : Form
     {
+        public DataContext Context { get; set; }
+        public SearchQuery SearchQuery { get; set; }
+        public BindingList<ArmorSet> SearchResult { get; set; }
+
         public Form1()
         {
             InitializeComponent();
-            Data data = new Data();
-            allSkillsListBox.DataSource = data.GetSkillList();
+
+            Context = new DataContext();
+            SearchQuery = new SearchQuery();
+
+            AllSkillsListBox.DataSource = Context.Skills;
+            SelectedSkillListBox.DataSource = SearchQuery.SelectedSkills;
         }
 
-        private void allSkillsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void AllSkillsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Skill skill = allSkillsListBox.SelectedItem as Skill;
-            List<ActiveSkill> activeSkills = new List<ActiveSkill>();
-            for (int i = 1; i <= skill.GetLevels(); ++i)
-            {
-                ActiveSkill activeSkill;
-                activeSkill._skill = skill;
-                activeSkill._points = i;
-                activeSkills.Add(activeSkill);
-            }
-            skillLevelsListBox.DataSource = activeSkills;
+            SkillLevelsListBox.BeginUpdate();
+            SkillLevelsListBox.DataSource = ((Skill)AllSkillsListBox.SelectedItem).ActiveSkills;
+            SkillLevelsListBox.EndUpdate();
         }
 
-        private void skillLevelsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void SelectedSkillsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void selectedSkillsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void AddSkillButton_Click(object sender, EventArgs e)
+        {
+            SelectedSkillListBox.BeginUpdate();
+            SelectedSkillListBox.SelectedIndex = SearchQuery.AddSearchSkill((ActiveSkill)SkillLevelsListBox.SelectedItem);
+            SelectedSkillListBox.EndUpdate();
+        }
+
+        private void RemoveSkillButton_Click(object sender, EventArgs e)
+        {
+            SelectedSkillListBox.BeginUpdate();
+            SearchQuery.RemoveSelectedSkillByIndex(SelectedSkillListBox.SelectedIndex);
+            SelectedSkillListBox.EndUpdate();
+        }
+
+        private void MainLayoutTable_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void addSkillButton_Click(object sender, EventArgs e)
+        private void AllSkillsGroupBox_Enter(object sender, EventArgs e)
         {
-            ActiveSkill selectedActiveSkill = (ActiveSkill)skillLevelsListBox.SelectedItem;
-            foreach (ActiveSkill current in selectedSkillsListBox.Items)
-            {
-                if (current._skill.GetName() == selectedActiveSkill._skill.GetName())
-                {
-                    selectedSkillsListBox.Items.Remove(current);
-                    break;
-                }
-            }
-            selectedSkillsListBox.Items.Add(skillLevelsListBox.SelectedItem);
+
         }
 
-        private void removeSkillButton_Click(object sender, EventArgs e)
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            selectedSkillsListBox.Items.Remove(selectedSkillsListBox.SelectedItem);
+
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            SearchResultTextBox.Clear();
+            SearchResult = null;
+            SearchResult = Context.SetSearch(SearchQuery.SelectedSkills.ToList());
+            SearchResultTextBox.Text = String.Join("\n-----------------------------------------------" + Environment.NewLine, SearchResult);
+        }
+
+        private void SelectedSkillListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuItems_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void SearchResultGroupBox_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

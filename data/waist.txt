@@ -1,0 +1,7 @@
+#Name|Slots|Skill|Points|...
+Hunter's Faulds|0|Master Mounter|1
+Forest Faulds|0|Recovery Up|1
+Jagras Faulds|0|Recovery Speed|1
+Anja Faulds|0|Attack Boost|1
+Ingot Faulds|0|Stun Resistance|1
+Feathered Faulds|0|Stealth|1

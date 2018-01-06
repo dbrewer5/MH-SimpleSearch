@@ -1,0 +1,7 @@
+#Name|Slots|Skill|Points|...
+Hunter's Armor|0|Attack Boost|1
+Forest Armor|0|Recovery Up|1
+Jagras Armor|0|Defense Boost|1
+Anja Armor|0|Fire Resistance|1
+Ingot Armor|0|Ice Attack|1
+Feathered Armor|0|Critical Eye|1
