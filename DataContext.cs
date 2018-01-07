@@ -15,14 +15,11 @@ namespace MHWSS
         public List<Armor> Waist { get; set; }
         public List<Armor> Legs { get; set; }
 
-        private readonly string[] filePaths =
+        private readonly string applicationDataPath = System.AppDomain.CurrentDomain.BaseDirectory + @"\data\";
+
+        private readonly string[] fileNames =
         {
-            @"C:\Users\damon\Documents\Projects\MHW-SimpleSearch\MHW-SimpleSearch\data\skills.txt",
-            @"C:\Users\damon\Documents\Projects\MHW-SimpleSearch\MHW-SimpleSearch\data\helm.txt",
-            @"C:\Users\damon\Documents\Projects\MHW-SimpleSearch\MHW-SimpleSearch\data\body.txt",
-            @"C:\Users\damon\Documents\Projects\MHW-SimpleSearch\MHW-SimpleSearch\data\arms.txt",
-            @"C:\Users\damon\Documents\Projects\MHW-SimpleSearch\MHW-SimpleSearch\data\waist.txt",
-            @"C:\Users\damon\Documents\Projects\MHW-SimpleSearch\MHW-SimpleSearch\data\legs.txt"
+            "skills.txt", "helm.txt", "body.txt", "arms.txt", "waist.txt", "legs.txt"
         };
 
         public DataContext()
@@ -38,18 +35,18 @@ namespace MHWSS
         private void Load()
         {
             Skills = LoadSkills();
-            Helms = LoadArmor(filePaths[1]);
-            Body = LoadArmor(filePaths[2]);
-            Arms = LoadArmor(filePaths[3]);
-            Waist = LoadArmor(filePaths[4]);
-            Legs = LoadArmor(filePaths[5]);
+            Helms = LoadArmor(applicationDataPath + fileNames[1]);
+            Body = LoadArmor(applicationDataPath + fileNames[2]);
+            Arms = LoadArmor(applicationDataPath + fileNames[3]);
+            Waist = LoadArmor(applicationDataPath + fileNames[4]);
+            Legs = LoadArmor(applicationDataPath + fileNames[5]);
         }
 
         private List<Skill> LoadSkills()
         {
             List<Skill> skillList = new List<Skill>();
             int count = 0;
-            var lines = File.ReadAllLines(filePaths[0]);
+            var lines = File.ReadAllLines(applicationDataPath + fileNames[0]);
             foreach (var line in lines)
             {
                 if (line.ElementAt(0) != '#')
